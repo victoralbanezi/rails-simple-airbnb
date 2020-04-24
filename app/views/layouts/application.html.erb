@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>RailsSimpleAirbnb</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
 
-  <body>
+<body>
+    <div class="header">
+        <h1>Simple Airbnb</h1>
+        <%= link_to "Create Flat", new_flat_path, :class => "btn btn-outline-primary btn-sm"%>
+
+
+
+    </div>
     <%= yield %>
-  </body>
+</body>
+
 </html>

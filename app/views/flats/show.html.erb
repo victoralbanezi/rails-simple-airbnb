@@ -1,0 +1,23 @@
+<div class="banner">
+
+</div>
+
+<div class="container">
+    <div class="flat-address-card">
+        <h3> <%= @flat.name %> </h3>
+        <p><%= @flat.address%></p>
+    </div>
+
+    <div class="flat-description-card">
+        <p><%= @flat.description%></p>
+    </div>
+    <div class="flat-details-card">
+        <div class="card-bottom">
+            <i class="fas fa-user-friends"></i>
+            <p><%= @flat.number_of_guests%></p>
+            <i class="fas fa-dollar-sign"></i>
+            <p><%= @flat.price_per_night%></p>
+        </div>
+    </div>
+    <%= link_to  "Back to Flats", flats_path ,class: "btn btn-outline-primary btn-sm"%>
+</div>

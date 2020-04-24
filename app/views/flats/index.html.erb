@@ -1,5 +1,8 @@
 <div class="title">
     <h2>All our flats (<%= @flats.count %>)</h1>
+        <%= search_field_tag :search, params[:search], class: "form-control" %>
+        <%= link_to  "Search", flats_path(params[:search]) , class: "btn btn-outline-primary btn-sm"%>
+
 </div>
 
 
@@ -7,7 +10,7 @@
 <div class="cards">
     <% @flats.each do |flat| %>
     <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?<%=%w(home, flat,penthouse, airbnb, apartament,house ).sample%>" alt="" />
+        <img src="https://source.unsplash.com/1600x900/?<%=%w(home, flat,penthouse, airbnb, apartament,house, view, mountains, beach, swimming, cozy ).sample%>" alt="" />
         <div class="card-description">
             <h1> <%= flat.name %> </h1>
             <h2><%= flat.address%></h2>

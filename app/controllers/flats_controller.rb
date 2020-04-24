@@ -1,6 +1,10 @@
 class FlatsController < ApplicationController
   def index
-    @flats = Flat.all
+    if params[:search].blank?
+      @flats = Flat.all
+    else
+      raise
+    end
   end
 
   def show
